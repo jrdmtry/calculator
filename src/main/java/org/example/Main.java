@@ -9,6 +9,7 @@ public class Main {
         multiply(5,5);
         try {
             multiply(0,5);
+            def(5,5);
         }catch (ArithmeticException e){
            e.printStackTrace();
         }
@@ -27,5 +28,14 @@ public class Main {
     }
     public static void minus(int firstNumber, int secondNumber) throws RuntimeException{
         System.out.println(firstNumber-secondNumber);
+
+    }
+    public static void def(int first, int sec) throws RuntimeException{
+        if (first == 0 || sec ==0){
+            throw new ArithmeticException("На 0 нельза")
+        }else {
+            System.out.println(first/sec);
+        }
+
     }
 }
